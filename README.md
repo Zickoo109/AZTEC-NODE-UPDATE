@@ -69,6 +69,7 @@ echo "All done! u have successfully joined the new testnet now rerun your node w
 **follow the onscreen instruction accordinly**
 **your OLD Sequencer Private Key will not be shown after pasting but that is fine**
 **save the new key that will be generated as you'll need it for the next step**
+*for ETH RPC: use `https://sepolia.drpc.org`*
 
 ## 4. Open 
 ```bash
