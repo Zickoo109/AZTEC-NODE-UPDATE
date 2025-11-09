@@ -90,9 +90,6 @@ sed -i 's|image: aztecprotocol/aztec:.*|image: aztecprotocol/aztec:2.1.2|' docke
 docker compose pull && \
 docker compose up -d
 ```
-## 6. check the attester pub address(i.e the new public address on *https://dashtec.xyz/queue* to confirm your validator registration
-
-### ALL DONE
 
 ### And if you run your node with CLI then rerun with 
 ```bash
@@ -100,9 +97,11 @@ aztec start --node --archiver --sequencer \
   --network testnet \
   --l1-rpc-urls Eth_Sepolia_RPC \
   --l1-consensus-host-urls Eth-beacon_sepolia_RPC \
-  --sequencer.validatorPrivateKeys 0xYourPrivateKey \
-  --sequencer.coinbase YourAddress \
+  --sequencer.validatorPrivateKeys 0xYourNewETHprivatekey \
+  --sequencer.coinbase YourNewpublicaddress \
   --p2p.p2pIp Your_ip
 ```
-*replace variables as mentionted in step 4*
-  
+
+## 6. check the attester pub address(i.e the new public address on *https://dashtec.xyz/queue* to confirm your validator registration
+
+### ALL DONE
