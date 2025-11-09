@@ -90,6 +90,7 @@ sed -i 's|image: aztecprotocol/aztec:.*|image: aztecprotocol/aztec:2.1.2|' docke
 docker compose pull && \
 docker compose up -d
 ```
+## 6. check the attester pub address(i.e the new public address on *https://dashtec.xyz/queue* to confirm your validator registration
 
 ### ALL DONE
 
