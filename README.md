@@ -67,14 +67,20 @@ aztec add-l1-validator \
 echo "All done! u have successfully joined the new testnet now rerun your node with your new pvt and address"
 ```
 **follow the onscreen instruction accordinly**
+
 **your OLD Sequencer Private Key will not be shown after pasting but that is fine**
+
 **save the new key that will be generated as you'll need it for the next step**
 
-*for ETH RPC when the script ask for one: use `https://sepolia.drpc.org`* dont use this RPC to run your node. its only for registration purpose
+*for ETH RPC when the script ask for one: use `https://sepolia.drpc.org`* 
+
+- Don't use this RPC to run your node. its only for registration purpose
 
 ### for those who run the node with docker
 
-### i. Open 
+### i. Go into your aztec directory and update .env
+```cd aztec```
+
 ```bash
 nano .env
 ```
@@ -86,13 +92,15 @@ Replace `coinbase address` with the new public address u saved
 
   ### ii. stop container and update image tag
   ```bash
-  cd aztec && \
 docker compose down -v && \
 sed -i 's|image: aztecprotocol/aztec:.*|image: aztecprotocol/aztec:2.1.2|' docker-compose.yml && \
 docker compose pull && \
 docker compose up -d
 ```
-
+- To view logs:
+  ```bash
+  docker compose logs -fn 1000
+  ```
 ### And if you run your node with CLI then rerun with 
 ```bash
 aztec start --node --archiver --sequencer \
